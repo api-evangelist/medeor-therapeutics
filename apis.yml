@@ -1,7 +1,14 @@
 aid: medeor-therapeutics
 name: Medeor Therapeutics
-description: 'Medeor Therapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Medeor Therapeutics is a clinical-stage cellular immunotherapy company in San Mateo, California,
+  developing MDR-101, a one-time cell therapy manufactured from a living kidney donor's blood that
+  induces mixed chimerism so HLA-matched transplant recipients can withdraw from lifelong
+  immunosuppression while preserving graft function. The platform originated in roughly two decades
+  of research at Stanford University led by Dr. Samuel Strober. The company completed a Phase 3
+  registration trial that exceeded its target success rate, and has since suspended operations and
+  is seeking an acquirer to complete the BLA filing. Medeor is a therapeutics developer, not a
+  software company: it publishes no developer portal, API, SDK, or machine-readable specification.
 url: https://raw.githubusercontent.com/api-evangelist/medeor-therapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +19,14 @@ created: '2026-08-25'
 modified: '2026-08-25'
 tags:
 - Company
+- Biotechnology
+- Life Sciences
+- Cell Therapy
+- Immunotherapy
+- Organ Transplant
+- Healthcare
+- Clinical Trials
+- Pharmaceuticals
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +35,38 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://medeortx.com/
+- type: PrivacyPolicy
+  url: https://medeortx.com/privacy-policy.php
+- type: News
+  url: https://medeortx.com/news.php
+- type: LinkedIn
+  url: https://www.linkedin.com/company/medeor-therapeutics/
+- type: SecondaryMarketListing
   url: https://forgeglobal.com/medeor-therapeutics_stock/
+- type: DomainSecurity
+  url: security/medeor-therapeutics-domain-security.yml
+x-enrichment:
+  date: '2026-08-25'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    medeortx.com serves a live homepage whose lead paragraph states Medeor has suspended operations
+    and is seeking an acquirer to complete the BLA filing, leaving a clinical-trial archive site
+    with no developer, API, or data surface of any kind.
+  evidence:
+  - url: https://medeortx.com/
+    status: 200
+  - url: https://medeortx.com/openapi.json
+    status: 404
+  - url: https://medeortx.com/llms.txt
+    status: 404
+  - url: https://medeortx.com/.well-known/api-catalog
+    status: 404
+  - url: https://github.com/medeortx
+    status: 404
+  checked: '2026-08-25'
